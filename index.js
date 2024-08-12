@@ -5,7 +5,6 @@ const userModel = require('./models/user');
 
 const app = express();
 app.use(cors());
-app.use(express.json());
 
 mongoose.connect('mongodb+srv://Jeeva066:Jeeva%40066@cluster0.zz2ev.mongodb.net/Express')
 
@@ -44,6 +43,6 @@ app.delete("/deleteUser/:id",(req,res)=>{
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(8000, () => {
     console.log("Server is running");
 })
